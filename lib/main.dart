@@ -1,76 +1,93 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(MyApp());
+void main() => runApp(Amit());
+
+class Amit extends StatefulWidget {
+  @override
+  _AmitState createState() => _AmitState();
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
-
+class _AmitState extends State<Amit> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
+        backgroundColor: Colors.black45,
         appBar: AppBar(
-          backgroundColor: Colors.teal[800],
-          title: Text('My Profile'),
-          centerTitle: true,
+          backgroundColor: Colors.teal[600],
+          title: Center(
+            child: Text('My Info'),
+          ),
         ),
-        backgroundColor: Colors.teal,
         body: SafeArea(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               Container(
-                height: 100.0,
-                child: Text(
-                  'Hello -01',
-                  style: TextStyle(
-                    fontSize: 18,
-                    color: Colors.white,
+                margin: EdgeInsets.all(20),
+                height: 80.0,
+                child: Center(
+                  child: Text(
+                    'Amit Gain',
+                    style: TextStyle(
+                      fontSize: 24,
+                      color: Colors.white,
+                    ),
                   ),
                 ),
-                color: Colors.blue,
+                color: Colors.pink,
               ),
               SizedBox(
                 height: 20.0,
               ),
               Container(
-                  height: 100.0,
+                margin: EdgeInsets.all(20),
+                height: 80.0,
+                child: Center(
                   child: Text(
-                    'Hello -02',
+                    'Amit Gain',
                     style: TextStyle(
-                      fontSize: 18,
+                      fontSize: 24,
                       color: Colors.white,
                     ),
                   ),
-                  color: Colors.red),
+                ),
+                color: Colors.purple,
+              ),
               SizedBox(
                 height: 20.0,
               ),
               Container(
-                  height: 100.0,
+                margin: EdgeInsets.all(20),
+                height: 80.0,
+                child: Center(
                   child: Text(
-                    'Hello -03',
+                    'Amit Gain',
                     style: TextStyle(
-                      fontSize: 18,
+                      fontSize: 24,
                       color: Colors.white,
                     ),
                   ),
-                  color: Colors.orange),
+                ),
+                color: Colors.teal,
+              ),
+              SizedBox(
+                height: 20.0,
+              ),
             ],
           ),
         ),
         floatingActionButton: FloatingActionButton(
           onPressed: () {
-            print('çlicked');
+            print('Amit');
           },
           child: Icon(
             Icons.add,
-            color: Colors.white,
-            size: 30,
+            color: Colors.black,
+            size: 40,
           ),
-          backgroundColor: Colors.blue,
+          backgroundColor: Colors.yellow,
         ),
       ),
     );
